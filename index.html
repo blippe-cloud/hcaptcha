@@ -9,6 +9,28 @@
   <link rel="stylesheet" href="output.css">
 </head>
 <body>
+  <div class="absolute navbar bg-accent text-accent-content">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl">curious george</a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal p-0 gap-4">
+        <li>
+          <a href="https://www.youtube.com/channel/UCjDcjOeP9KM8gSzQSeZC7IQ"
+            class="btn btn-error" target="_blank">
+            YouTube
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <label for="error-modal" class="btn btn-info">
+            Github
+            <ion-icon name="logo-github"></ion-icon>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
   <div
     class="container mx-auto text-center flex flex-col gap-20 justify-center items-center p-20 lg:p-0 lg:h-screen">
     <h1 class="text-5xl">あなたはロボット?</h1>
@@ -17,7 +39,7 @@
       <br />
       そんな方のために、hCaptchaをたくさん用意しました。是非試してみてください。
     </p>
-    <div class="lg:flex">
+    <div class="lg:flex lg:gap-3">
       <div class="card shadow-md bg-primary text-primary-content">
         <div class="card-body">
           <div class="h-captcha" data-sitekey="58c923e8-8878-4f19-8a15-7bf63bba7091">
@@ -49,6 +71,21 @@
         </div>
       </div>
     </div>
+    <button class="btn btn-lg" onclick="location.reload();">
+      やり直す
+      <ion-icon name="reload-outline"></ion-icon>
+    </button>
   </div>
+  <input type="checkbox" id="error-modal" class="modal-toggle">
+  <div class="modal">
+    <div class="modal-box">
+      <h3 class="font-bold text-lg">Something went wrong</h3>
+      <label for="error-modal" class="btn btn-ghost">Close</label>
+    </div>
+  </div>
+  <script type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
